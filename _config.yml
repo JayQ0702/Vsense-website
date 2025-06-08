@@ -6,7 +6,7 @@ plugins:
   - jekyll-github-metadata
   - jemoji
 
-permalink: /:categories/:title/
+permalink: /:year/:month/:day/:title/
 
 defaults:
   -
@@ -16,13 +16,19 @@ defaults:
     values:
       layout: "post"
 
-# Home sections (like orviboaustralia.com)
+projects:
+  sort_by: pushed
+  limit: 9
+  exclude:
+    archived: false
+    forks: true
+
 sections:
   - name: Hero
     title: Welcome to Vsense
     subtitle: Smarter Living, One Device at a Time
     button:
-      text: Discover Products
+      text: Explore Products
       link: /products
     background_image: /assets/images/hero.jpg
 
@@ -34,14 +40,14 @@ sections:
       - icon: /assets/icons/security.svg
         title: Enhanced Security
         description: Keep your home safe with real-time alerts and monitoring.
-      - icon: /assets/icons/app.svg
-        title: App Integration
-        description: Manage everything from your mobile device.
+      - icon: /assets/icons/integration.svg
+        title: App & Voice Integration
+        description: Works with Alexa, Google, and Apple HomeKit.
 
-  - name: Products
+  - name: Product Showcase
     title: Featured Products
-    display_limit: 6
     layout: grid
+    limit: 6
 
   - name: Testimonials
     title: What Our Customers Say
@@ -51,19 +57,18 @@ sections:
       - name: Tom R.
         quote: "Easy to install and works flawlessly with Alexa and Google."
 
+  - name: Video
+    video_url: https://www.youtube.com/embed/demo123
+    title: See Vsense in Action
+
   - name: Contact
     title: Get In Touch
-    description: Reach out to us for business or support inquiries.
     form:
       action: /contact
       method: post
-
-projects:
-  sort_by: pushed
-  limit: 6
-  exclude:
-    archived: false
-    forks: true
+    address: 123 Smart St, Auckland, NZ
+    phone: "+64 21 000 0000"
+    email: support@vsense.io
 
 social_media:
   facebook: vsense.official
@@ -73,14 +78,12 @@ social_media:
   website: https://vsense.io
 
 topics:
-  - name: Smart Home
-    web_url: https://github.com/topics/smart-home
-    image_url: https://example.com/icons/smart-home.png
+  - name: CSS
+    web_url: https://github.com/topics/css
+    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
 
-  - name: IoT
-    web_url: https://github.com/topics/iot
-    image_url: https://example.com/icons/iot.png
+  - name: Web design
 
-  - name: Automation
-    web_url: https://github.com/topics/automation
-    image_url: https://example.com/icons/automation.png
+  - name: Sass
+    web_url: https://github.com/topics/sass
+    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
