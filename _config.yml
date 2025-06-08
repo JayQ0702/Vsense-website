@@ -25,41 +25,44 @@ projects:
 
 sections:
   - name: Hero
-    title: Welcome to Vsense
-    subtitle: Smarter Living, One Device at a Time
+    title: Smart Life with Vsense
+    subtitle: Make life simpler and better with innovative technology, products and design.
     button:
-      text: Explore Products
+      text: Discover More
       link: /products
-    background_image: /assets/images/hero.jpg
+    background_image: /assets/images/hero-socket.jpg
 
-  - name: Features
-    features:
-      - icon: /assets/icons/automation.svg
-        title: Full Home Automation
-        description: Seamlessly control lighting, climate, and security.
-      - icon: /assets/icons/security.svg
-        title: Enhanced Security
-        description: Keep your home safe with real-time alerts and monitoring.
-      - icon: /assets/icons/integration.svg
-        title: App & Voice Integration
-        description: Works with Alexa, Google, and Apple HomeKit.
+  - name: Product Menu
+    dropdown:
+      title: Products
+      items:
+        - Smart Door Lock C1
+        - Smart Door Lock T1
+        - Mixpad X Smart Panel
+        - Mixpad 7 Ultra Smart Panel
+        - Mixpad 7 Multifunctional Control Panel
+        - Mixpad 5
+        - Allone
+        - Security Kit
+        - ZigBee Mini Hub
+        - ZigBee Smart Switch
+        - B25AUS Smart Socket
+        - In-wall Switch
+        - Motion Sensor
+        - Smart Curtain Motor
+        - Magic Cube
+        - Door Sensor
+        - Temperature and Humidity Sensor
+        - WiFi Camera
 
   - name: Product Showcase
-    title: Featured Products
+    title: Explore Our Products
     layout: grid
-    limit: 6
+    limit: 12
 
-  - name: Testimonials
-    title: What Our Customers Say
-    testimonials:
-      - name: Sarah M.
-        quote: "Vsense completely changed how I interact with my home."
-      - name: Tom R.
-        quote: "Easy to install and works flawlessly with Alexa and Google."
-
-  - name: Video
-    video_url: https://www.youtube.com/embed/demo123
-    title: See Vsense in Action
+  - name: About
+    title: About Vsense
+    content: "We bring intelligent living into your home through seamless, innovative solutions."
 
   - name: Contact
     title: Get In Touch
