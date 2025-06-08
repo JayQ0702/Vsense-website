@@ -1,4 +1,4 @@
-layout: sidebar
+layout: home
 style: light
 
 plugins:
@@ -6,53 +6,81 @@ plugins:
   - jekyll-github-metadata
   - jemoji
 
-permalink: /:year/:month/:day/:title/
+permalink: /:categories/:title/
 
 defaults:
   -
     scope:
-      path: "" # an empty string here means all files in the project
+      path: ""
       type: "posts"
     values:
       layout: "post"
 
+# Home sections (like orviboaustralia.com)
+sections:
+  - name: Hero
+    title: Welcome to Vsense
+    subtitle: Smarter Living, One Device at a Time
+    button:
+      text: Discover Products
+      link: /products
+    background_image: /assets/images/hero.jpg
+
+  - name: Features
+    features:
+      - icon: /assets/icons/automation.svg
+        title: Full Home Automation
+        description: Seamlessly control lighting, climate, and security.
+      - icon: /assets/icons/security.svg
+        title: Enhanced Security
+        description: Keep your home safe with real-time alerts and monitoring.
+      - icon: /assets/icons/app.svg
+        title: App Integration
+        description: Manage everything from your mobile device.
+
+  - name: Products
+    title: Featured Products
+    display_limit: 6
+    layout: grid
+
+  - name: Testimonials
+    title: What Our Customers Say
+    testimonials:
+      - name: Sarah M.
+        quote: "Vsense completely changed how I interact with my home."
+      - name: Tom R.
+        quote: "Easy to install and works flawlessly with Alexa and Google."
+
+  - name: Contact
+    title: Get In Touch
+    description: Reach out to us for business or support inquiries.
+    form:
+      action: /contact
+      method: post
+
 projects:
   sort_by: pushed
-  # sort_by options:
-  #   - pushed
-  #   - stars
-  limit: 9
+  limit: 6
   exclude:
     archived: false
     forks: true
-    projects:
-    # - repo-name
 
-# social_media:
-  # behance: your_username
-  # dribbble: your_username
-  # facebook: your_username
-  # hackerrank: your_username
-  # instagram: your_username
-  # keybase: your_username
-  # linkedin: your_username
-  # mastodon: your_username
-  # medium: your_username
-  # stackoverflow: your_user_id
-  # telegram: your_username
-  # twitter: your_username
-  # unsplash: your_username
-  # vk: your_username
-  # website: http://your_website_url
-  # youtube: your_username
+social_media:
+  facebook: vsense.official
+  instagram: vsense.tech
+  linkedin: company/vsense
+  youtube: vsensechannel
+  website: https://vsense.io
 
 topics:
-  - name: CSS
-    web_url: https://github.com/topics/css
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
+  - name: Smart Home
+    web_url: https://github.com/topics/smart-home
+    image_url: https://example.com/icons/smart-home.png
 
-  - name: Web design
+  - name: IoT
+    web_url: https://github.com/topics/iot
+    image_url: https://example.com/icons/iot.png
 
-  - name: Sass
-    web_url: https://github.com/topics/sass
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
+  - name: Automation
+    web_url: https://github.com/topics/automation
+    image_url: https://example.com/icons/automation.png
